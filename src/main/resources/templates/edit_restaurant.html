@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Restaurant</title>
+</head>
+<body>
+
+<form th:action="@{/save-edit}" th:method="POST" th:object="${restaurant}">
+
+    <div>
+        <input type="text" hidden="" th:field="*{id}"/>
+    </div>
+
+    <div>
+        <label>Name</label>: <input type="text" th:field="*{name}"/>
+    </div>
+
+    <div>
+        <label>Location</label>: <input type="text" th:field="*{location}"/>
+    </div>
+
+    <div>
+        <label>Rating</label>: <input type="number" step="0.1" th:field="*{rating}"/>
+    </div>
+
+    <div>
+        <label>Cuisine</label>: <input type="text" th:field="*{cuisine}"/>
+    </div>
+
+    <button type="submit">Update</button>
+</form>
+
+</body>
+</html>

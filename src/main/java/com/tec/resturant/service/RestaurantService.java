@@ -28,4 +28,8 @@ public class RestaurantService {
     public void saveRestaurant(Restaurant restaurant){
         restaurantRepository.save(restaurant);
     }
+
+    public void updateRestaurant(Restaurant restaurant){
+        restaurantRepository.save(restaurant);
+    }
 }
