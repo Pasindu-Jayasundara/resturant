@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Location</th>
+        <th>Rating</th>
+        <th>Cuisine</th>
+        <th>Actions</th>
+    </tr>
+    <element th:each="restaurant : ${restaurantList}">
+        <tr>
+            <td th:text="${restaurant.id}"></td>
+            <td th:text="${restaurant.name}"></td>
+            <td th:text="${restaurant.location}"></td>
+            <td th:text="${restaurant.rating}"></td>
+            <td th:text="${restaurant.cuisine}"></td>
+            <td>
+                <a th:href="@{/edit(id=${restaurant.id})}">Edit</a>
+                <a th:href="@{/delete(id=${restaurant.id})}">Delete</a>
+            </td>
+        </tr>
+    </element>
+</table>
+
+</body>
+</html>
